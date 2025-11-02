@@ -17,7 +17,6 @@ I'm going to carry out:
 <h2>Utilities Used</h2>
 
 - <b>Mac Terminal</b> 
-- <b>Format command</b>
 - <b>Linksys iphone smart wifi app</b>
 
 <h2>Environments Used </h2>
