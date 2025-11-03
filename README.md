@@ -5,7 +5,7 @@ A project that shows how to configure a Linkysys SOHO router and carry out basic
 <h1>SOHO-Router-Configuration-Network-Administration-Linksys-Mesh-System</h1>
 
 <h2>Description</h2>
-This project I perform basic networking administration and configuration on my Linkysys router. We have a mesh system set up so that there are additional child nodes and a TP-link extender set up to cover the house. Our ISP is Gigaclear.
+This project I perform basic networking administration and configuration on my Linkysys router. We have a mesh system set up so that there are additional child nodes and an additional TP-link extender set up to cover the house. Our ISP is Gigaclear fibre.
 I'm going to carry out:
 
 1. Management and DHCP lease reserving
@@ -16,15 +16,15 @@ I'm going to carry out:
 
 
 
-<h2>Utilities Used</h2>
+<h2>Utilities and environments Used</h2>
 
-- <b>Mac Terminal</b> 
+
+- <b>Router: Linksys SPNMX55 Mesh Network (1 parent + 2 child nodes)</b>
+- <b>Wifi Extender: TP-Link RE500X: AX1500 WiFi-6 Range Extender</b>
+- <b>Linksys iphone smart wifi iphone app</b>
+- <b>Macbook air 2020 and Terminal</b> 
 - <b>Linksys iphone smart wifi app</b>
 
-<h2>Environments Used </h2>
-
-- <b>Iphone 13</b> (21H2)
-- <b>Macbook Air 2020</b> (21H2)
 
   
 <h2>Project walk-through:</h2>
