@@ -7,11 +7,13 @@ A project that shows how to configure a Linkysys SOHO router and carry out basic
 <h2>Description</h2>
 This project I perform basic networking administration and configuration on my Linkysys router. We have a mesh system set up so that there are additional child nodes and a TP-link extender set up to cover the house. Our ISP is Gigaclear.
 I'm going to carry out:
+
 1. Management and DHCP lease reserving
 2. WiFi set up to include a SSID name change and setting up a Guest Wifi
 3. Basic port forwarding
-4. Testing and reflection
-<br />
+4. Change Wifi Security Type
+5. Testing and reflection
+
 
 
 <h2>Utilities Used</h2>
@@ -45,7 +47,6 @@ Now that I have changed the reserved lease, I restarted my macbook and opened th
 <img src="https://i.postimg.cc/v8nC6kFZ/5-Mac-Terminal-testing-connectivity.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-
 Next I wanted to create a guest Wifi. It's my families network and this hadn't been configured by the engineer who installed the system. I made a new network so that it's separate from our home wifi and adds an element of network segmentation, better for security:  <br/>
 <img src="https://i.postimg.cc/gch16QFj/6-Creating-Guest-Segmentation.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 <br />
@@ -54,7 +55,22 @@ Here just shows me checking that the router created the guest network and it's s
 <img src="https://i.postimg.cc/gch16QFJ/7-Guest-network-appearing-success.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+I also want to change the Gigaclear router SSID and password as this also had not been changed upon initial installation and was still set to "Gigaclear_c06c": I set it to ChobletHome instead.
+Furthermore, because this was a mesh network, I was slightly confused as there was actually an additional TP-link Wifi Extender that I didnt realise was part of the network as it was set up as an extension, not being part of the mesh network and was labelled "Gigaclear_c06c_EXT" with the ext standing for external. 
+After I changed the SSID I had some difficulty reconnecting the extender so I had to connect via WPS button simultaneously on the main router and then extender; the TP-link then changed also to "ChobletHome_EXT" automatically which is very interesting:  <br/>
+<img src="https://i.postimg.cc/x8chRT4f/B2-SSID-change-2.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.postimg.cc/4ymq5NSJ/B1-SSID-change.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+
 Now I wanted to configure some single port forwarding. I picked Remote Desktop Protocol RDP 3389 as an example so that I could control a PC remotely if needed, selecting TCP for sure delivery of data. I also made sure to disable the port afterwards for security:  <br/>
 <img src="https://i.postimg.cc/QN7vWwGB/8-Port-Forwarding.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+This wasn't on my original plan, but I found the security setting to be on WPA2 only so I changed it to WPA2/WPA3 Mixed as we have some older devices at home that may not be able to connect to just WPA3 with modern encryption:  <br/>
+<img src="https://i.postimg.cc/7hfdVYWP/IMG-2477.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Finally I re ran the Mac Terminal and tested the network settings like previously and it was working again.
+All in all, I learned how to configure a real life SOHO router but also setting up as a mesh network with multiple child nodes and a wifi range extender. It would probably have been easier if it was done all through one computers interface instead of using the iphone app 
